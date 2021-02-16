@@ -36,3 +36,14 @@ class FlowOfExecutionTest {
       
       assertEquals(expected, actual);
       }
+	
+	@Test
+	@DisplayName("Test overloaded method doubleMe() for accurate double value.")
+	public void testDoubleMe() {
+		
+		double expected = 400.44;
+		double actual = MyMethods.doubleMe(200.22);
+		
+		assertEquals(expected, actual);
+	}
+}
