@@ -47,3 +47,25 @@ class FlowOfExecutionTest {
 		assertEquals(expected, actual);
 	}
 }
+
+@Test
+  @DisplayName("Test overloaded method doubleMe() for accurate double value.")
+  public void testDoubleMeDouble() {
+   	
+  	double expected = 5.0;
+  	double actual  = MyMethods.doubleMe(2.5);
+   	
+  	assertEquals(expected, actual, 0.01);
+   	
+  }
+   
+  @Test
+  @DisplayName("Test FlowOfExecution Class")
+  public void testFlowOfExecutionClass() {
+  	FlowOfExecution foeAM = new FlowOfExecution();   // This works because arbitraryMethod is not static
+  	String actual = foeAM.arbitraryMethod("Sad Face"); // if it was, we wouldn't have to build the object
+  	String expected = "What did you call me? A Sad Face?"; // So eclipse would tell us we were doing it wrong.
+   	
+  	assertEquals(expected, actual);
+   	
+  }
