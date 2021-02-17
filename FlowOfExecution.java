@@ -29,5 +29,8 @@ public class FlowOfExecution{
         System.out.println(MyMethods.doubleMe(doubleNum) + "\n");
     }
 }
-
+public String arbitraryMethod(String a) {
+  	String returnValue = "What did you call me? A " + a + "?";
+  	return returnValue;
+  }
 	
